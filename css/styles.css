@@ -21,14 +21,37 @@ a {
   text-decoration: none;
 }
 
+h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
   color: var(--title-text-color);
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
+/*Utility*/
+
+.container {
+  width: 1200px;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  outline: 2px solid tomato;
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.item + .item {
+  margin-left: 30px;
+}
 /*Header*/
 
 /*Logo*/
@@ -51,7 +74,23 @@ h6 {
 
 /*Site nav*/
 
+.site-nav {
+  display: flex;
+  margin-left: 93px;
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+}
+
+.nav-item + .nav-item {
+  margin-left: 50px;
+}
 .nav-link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
@@ -67,13 +106,11 @@ h6 {
   color: var(--accent-color);
 }
 
-.list {
-  list-style: none;
-}
-
 /*Contacts*/
 
 .head-contacts {
+  display: flex;
+  margin-left: auto;
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
@@ -98,6 +135,9 @@ h6 {
 }
 
 .hero-text {
+  max-width: 700px;
+  margin-right: auto;
+  margin-left: auto;
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
@@ -107,17 +147,34 @@ h6 {
 }
 
 .hero-button {
+  display: inline-block;
+  width: 200px;
+  height: 50px;
+  padding-top: 10px;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.87;
   letter-spacing: 0.06em;
   color: var(--primary-white-color);
   background-color: var(--accent-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
 }
 
 /*Advantages*/
 
+.advantages {
+  display: flex;
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.item + .item {
+  margin-left: 30px;
+}
+
 .advantages-title {
+  margin-top: 0;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
@@ -126,13 +183,26 @@ h6 {
 }
 
 .advantages-text {
+  margin-top: 10px;
   font-size: 14px;
   line-height: 1.71;
   color: var(--primary-text-color);
 }
 
+.no-title {
+  display: none;
+}
+
 /*Projects*/
 
+.section-projects > .container {
+  padding-bottom: 94px;
+}
+.projects {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+}
 .projects-title {
   font-weight: 700;
   font-size: 36px;
@@ -141,8 +211,27 @@ h6 {
   color: var(--title-text-color);
 }
 
+.item + .item {
+  margin-left: 30px;
+}
+
 /*Team*/
 
+.team-section {
+  background: #f5f4fa;
+  text-align: center;
+}
+
+.team-section > .container {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.team {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+}
 .team-title {
   font-weight: 700;
   font-size: 36px;
@@ -151,7 +240,15 @@ h6 {
   color: var(--title-text-color);
 }
 
+.team > .item {
+  height: 368px;
+  background: #ffffff;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+}
 .member {
+  margin-top: 30px;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.19;
@@ -159,6 +256,7 @@ h6 {
 }
 
 .member-text {
+  margin-top: 10px;
   font-size: 16px;
   line-height: 1.19;
   color: var(--primary-text-color);
@@ -167,9 +265,16 @@ h6 {
 /*Footer*/
 
 .footer-box {
+  padding-top: 60px;
+  padding-bottom: 60px;
   background: #2f303a;
 }
 
+.foot-contacts {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
 .address-text {
   font-style: normal;
   font-size: 14px;
@@ -178,6 +283,7 @@ h6 {
 }
 
 .foot-link {
+  margin-top: 9px;
   font-style: normal;
   font-size: 14px;
   line-height: 1.71;
@@ -186,6 +292,9 @@ h6 {
 
 /*Portfolio*/
 
+.border {
+  border-bottom: 1px solid #ececec;
+}
 .portfolio-button {
   font-weight: 500;
   font-size: 16px;
