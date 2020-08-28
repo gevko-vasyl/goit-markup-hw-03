@@ -21,6 +21,11 @@ a {
   text-decoration: none;
 }
 
+p {
+  margin: 0;
+  padding: 0;
+}
+
 h1,
 h2,
 h3,
@@ -40,7 +45,6 @@ h6 {
   padding-left: 15px;
   margin-left: auto;
   margin-right: auto;
-  outline: 2px solid tomato;
 }
 
 .list {
@@ -52,6 +56,11 @@ h6 {
 .item + .item {
   margin-left: 30px;
 }
+
+.no-title {
+  display: none;
+}
+
 /*Header*/
 
 /*Logo*/
@@ -189,10 +198,6 @@ h6 {
   color: var(--primary-text-color);
 }
 
-.no-title {
-  display: none;
-}
-
 /*Projects*/
 
 .section-projects > .container {
@@ -257,6 +262,7 @@ h6 {
 
 .member-text {
   margin-top: 10px;
+  margin-bottom: 30px;
   font-size: 16px;
   line-height: 1.19;
   color: var(--primary-text-color);
@@ -295,11 +301,49 @@ h6 {
 .border {
   border-bottom: 1px solid #ececec;
 }
+
+.portfolio {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.portfolio > .buttons {
+  display: flex;
+  justify-content: center;
+}
+
+.buttons li:not(:first-child) {
+  margin-left: 8px;
+}
+
 .portfolio-button {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.62;
   color: var(--title-text-color);
+  background: #f5f4fa;
+  border-radius: 4px;
+}
+
+.portfolio > .portfolio-items {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 50px;
+}
+
+.portfolio-items li {
+  margin-right: 30px;
+  margin-bottom: 30px;
+  background: #ffffff;
+  outline: 1px solid #eeeeee;
+}
+
+.portfolio-items li:nth-child(3n) {
+  margin-right: 0;
+}
+
+.portfolio-items li:nth-last-child(-n + 3) {
+  margin-bottom: 0;
 }
 
 .portfolio-button:hover,
@@ -309,6 +353,8 @@ h6 {
 }
 
 .portfolio-title {
+  margin-top: 20px;
+  margin-left: 24px;
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
@@ -317,6 +363,9 @@ h6 {
 }
 
 .portfolio-category {
+  margin-top: 4px;
+  margin-left: 24px;
+  margin-bottom: 20px;
   font-size: 16px;
   line-height: 1.87;
   color: var(--primary-text-color);
