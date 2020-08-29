@@ -39,6 +39,11 @@ h6 {
 
 /*Utility*/
 
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
 .container {
   width: 1200px;
   padding-right: 15px;
@@ -138,7 +143,9 @@ h6 {
 
 /*Hero*/
 
-.hero {
+.hero-section {
+  padding-top: 200px;
+  padding-bottom: 200px;
   background: #2f303a;
   text-align: center;
 }
@@ -159,6 +166,7 @@ h6 {
   display: inline-block;
   width: 200px;
   height: 50px;
+  margin-top: 30px;
   padding-top: 10px;
   font-weight: 700;
   font-size: 16px;
@@ -174,8 +182,6 @@ h6 {
 
 .advantages {
   display: flex;
-  padding-top: 94px;
-  padding-bottom: 94px;
 }
 
 .item + .item {
@@ -223,13 +229,10 @@ h6 {
 /*Team*/
 
 .team-section {
-  background: #f5f4fa;
-  text-align: center;
-}
-
-.team-section > .container {
   padding-top: 94px;
   padding-bottom: 94px;
+  background: #f5f4fa;
+  text-align: center;
 }
 
 .team {
@@ -307,7 +310,7 @@ h6 {
   padding-bottom: 94px;
 }
 
-.portfolio > .buttons {
+.buttons {
   display: flex;
   justify-content: center;
 }
@@ -325,7 +328,7 @@ h6 {
   border-radius: 4px;
 }
 
-.portfolio > .portfolio-items {
+.portfolio-items {
   display: flex;
   flex-wrap: wrap;
   margin-top: 50px;
